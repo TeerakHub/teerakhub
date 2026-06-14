@@ -96,8 +96,25 @@ const SERIES = [
       { character: "Soo-jin", actor: "Actor Name" },
       { character: "Ji-eun", actor: "Actor Name" }
     ]
-  }
-  /* ---------------------------------------------------
+  },
+    {
+    id: "enemies-with-benefits",
+    title: "Enemies with Benefits",
+    type: "series",
+    genre: "GL",
+    country: "Thailand",
+    poster: "images/placeholder-poster.jpg",
+    couplePhoto: "images/placeholder-couple.jpg",
+    yearStart: 2026,
+    yearEnd: 2026,
+    happyEnding: "unknown",
+    watchOn: ["GMMTV YouTube"],
+    studio: "GMMTV",
+    cast: [
+      { character: "Lal", actor: "Jan Ployshompoo Supasap" },
+      { character: "Wine", actor: "JingJing Prariyapit Yu" }
+    ]
+ },
      Copy the block above (from { to },) to add a new
      show. Don't forget the comma between entries!
   --------------------------------------------------- */
