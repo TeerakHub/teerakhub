@@ -114,10 +114,7 @@ const SERIES = [
       { character: "Lal", actor: "Jan Ployshompoo Supasap" },
       { character: "Wine", actor: "JingJing Prariyapit Yu" }
     ]
- },
-     Copy the block above (from { to },) to add a new
-     show. Don't forget the comma between entries!
-  --------------------------------------------------- */
+}
 ];
 
 
