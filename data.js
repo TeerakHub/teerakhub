@@ -104,7 +104,7 @@ const SERIES = [
     genre: "GL",
     country: "Thailand",
     poster: "ewb-poster.jpg",
-    couplePhoto: "images/placeholder-couple.jpg",
+    couplePhoto: "janjingjing.jpg",
     yearStart: 2026,
     yearEnd: 2026,
     happyEnding: "unknown",
