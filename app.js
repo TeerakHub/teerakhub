@@ -146,20 +146,41 @@ function renderResults() {
     return;
   }
 
-  const groups = groupByCountry(filtered);
+   const groups = groupByCountry(filtered);
   const countryNames = Object.keys(groups).sort();
-
-  results.innerHTML = countryNames.map(c => `
-    <section class="country-section">
-      <div class="country-heading">
-        <h2>${esc(c)}</h2>
-        <div class="line"></div>
-      </div>
-      <div class="card-grid">
-        ${groups[c].map(showCard).join('')}
-      </div>
-    </section>
-  `).join('');
+  const genreOrder = ['GL', 'BL', 'WLW', 'Queer'];
+  results.innerHTML = countryNames.map(c => {
+    let body;
+    if (genre === 'All') {
+      const byGenre = {};
+      groups[c].forEach(item => {
+        if (!byGenre[item.genre]) byGenre[item.genre] = [];
+        byGenre[item.genre].push(item);
+      });
+      const genreNames = Object.keys(byGenre).sort((a, b) => {
+        const ai = genreOrder.indexOf(a);
+        const bi = genreOrder.indexOf(b);
+        return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+      });
+      body = genreNames.map(g => `
+        <h3 class="genre-subheading"><span class="tag ${esc(g)}">${esc(g)}</span></h3>
+        <div class="card-grid">
+          ${byGenre[g].map(showCard).join('')}
+        </div>
+      `).join('');
+    } else {
+      body = `<div class="card-grid">${groups[c].map(showCard).join('')}</div>`;
+    }
+    return `
+      <section class="country-section">
+        <div class="country-heading">
+          <h2>${esc(c)}</h2>
+          <div class="line"></div>
+        </div>
+        ${body}
+      </section>
+    `;
+  }).join('');
 }
 
 /* ---------------- Series detail ---------------- */
