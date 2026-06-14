@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teerakhub — GL, BL, WLW & Queer Dramas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quote-banner" id="quote-banner"></div>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="#/home" class="logo">teerak<span>hub</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="main-nav">
+        <a href="#/home" data-page="home">Home</a>
+        <a href="#/stickers" data-page="stickers">Stickers</a>
+        <a href="#/actors" data-page="actors">Actor Database</a>
+        <a href="#/suggest" data-page="suggest">Suggest a Title</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="app"></div>
+    </div>
+  </main>
+
+  <footer>
+    <span class="logo">teerak<span style="color: var(--text-faint); -webkit-text-fill-color: var(--text-faint);">hub</span></span>
+    A home for GL, BL, WLW & queer stories.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
