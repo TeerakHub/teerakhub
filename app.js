@@ -177,13 +177,16 @@ function renderResults() {
       body = `<div class="card-grid">${groups[c].map(showCard).join('')}</div>`;
     }
 
-    return `
+  return `
       <section class="country-section">
         <div class="country-heading">
           <h2>${esc(c)}</h2>
           <div class="line"></div>
         </div>
         ${body}
+      </section>
+    `;
+  }).join('');
 }
 
 /* ---------------- Series detail ---------------- */
