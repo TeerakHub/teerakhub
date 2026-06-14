@@ -103,7 +103,7 @@ const SERIES = [
     type: "series",
     genre: "GL",
     country: "Thailand",
-    poster: "images/placeholder-poster.jpg",
+    poster: "ewb-poster.jpg",
     couplePhoto: "images/placeholder-couple.jpg",
     yearStart: 2026,
     yearEnd: 2026,
