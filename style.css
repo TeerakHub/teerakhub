@@ -92,6 +92,9 @@ header.site-header {
   gap: 24px;
 }
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.6rem;
